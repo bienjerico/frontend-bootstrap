@@ -1,7 +1,8 @@
 body {
 }
+
 .image-box {
-	// position: relative;
+	position: relative;
 }
 
 .image-box a {
@@ -12,20 +13,7 @@ body {
 	position: relative;
     overflow: hidden;
 }
-.image-box .image-box-bg{
-    height: 100%;
-    width: 100%;
 
-	transition: all .2s ease-out; 
-	-moz-transition: all .2s ease-out;
-	-webkit-transition: all .2s ease-out;
-	-o-transition: all .2s ease-out;
-}
-
-.image-box .image-box-bg:hover{
-    height: 102%;
-    width: 102%;
-}
 .image-box .image-box-logo{
     position: absolute;
     left:0;
@@ -40,47 +28,13 @@ body {
 
 .image-box .image-box-title {
 	position: absolute;
-    top: 0;
-    margin-top: 20px;
-    margin-left: 80px;
-    display: block;
+    top: 20px;
+    left: 80px;
 }
-.image-box .image-box-title h4{
+.image-box .image-box-title{
 	color: white;
-	margin: 0;
-	    display: inline-block;
 }
-
-.image-box .image-box-title h4::after {
-	position: absolute;
-	bottom: -10px;
-	left: 0;
-	width: 100%;
-	height: 3px;
-	background: #fff;
-	content: '';
-	transition: transform 0.35s;
-	-webkit-transition: -webkit-transform 0.35s;
-	transform: translate3d(-200%,0,0);
-	-webkit-transform: translate3d(-200%,0,0);
-}
-
-.image-box .image-box-title-fx h4::after {
-	transform: translate3d(0,0,0);
-	-webkit-transform: translate3d(0,0,0);
-}
-
-
-.image-box .image-box-noflag .image-box-logo{
-	display: none;
-}
-.image-box .image-box-noflag .image-box-title{
-	margin-left: 30px;
-}
-
-
-.remove-white-space-all {
-	padding: 0;
+.image-box .image-box-title h1,h2,h3,h4,h5,h6 {
 	margin: 0;
 }
 
@@ -88,3 +42,221 @@ body {
 	padding: 6px;
 }
 
+
+/* background hover zoom  */
+.hover-zoom .hover-zoom-bg{
+	height: 100%;
+    width: 100%;
+
+	transition: all .2s ease-out; 
+	-moz-transition: all .2s ease-out;
+	-webkit-transition: all .2s ease-out;
+	-o-transition: all .2s ease-out;
+}
+
+.hover-zoom:hover .hover-zoom-bg{
+    height: 102%;
+    width: 102%;
+}
+
+
+/* text underline animation*/
+.underline-animation .underline-animation-content{
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.underline-animation .underline-animation-content .underline-animation-effects::after {
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: #fff;
+	content: '';
+	transition: transform 0.35s;
+	-webkit-transition: -webkit-transform 0.35s;
+	transform: translate3d(-100%,0,0);
+	-webkit-transform: translate3d(-100%,0,0);
+}
+
+.underline-animation:hover .underline-animation-content .underline-animation-effects::after   {
+	transform: translate3d(0,0,0);
+	-webkit-transform: translate3d(0,0,0);
+}
+
+
+
+/* static image box */
+.image-box-static {
+	border: 1px solid blue;
+}
+.image-box-static .image-box{
+	display: inline-block; 
+	padding:6px;
+	width: 100%;
+}
+
+.image-box-static .image-box-logo {
+	padding-left: 6px;
+	padding-top: 6px;
+}
+
+.image-box-static .image-box-static-bg {
+	width: 100%;
+	height: 100%;
+	transition: all .2s ease-out; 
+	-moz-transition: all .2s ease-out;
+	-webkit-transition: all .2s ease-out;
+	-o-transition: all .2s ease-out;
+}
+
+.image-box-static .image-box-static-bg:hover {
+	width: 102%;
+	height: 102%;
+}
+
+
+
+
+
+@media screen  and (min-width: 768px) { 
+	.image-box-static  .image-box{
+		border: 1px solid;
+	}
+
+	.image-box-static .image-box-static-bg {
+		transition: all .2s ease-out; 
+		-moz-transition: all .2s ease-out;
+		-webkit-transition: all .2s ease-out;
+		-o-transition: all .2s ease-out;
+	}
+
+	.image-box-static .image-box-static-one {
+		width: 239px;
+	}
+
+	.image-box-static .image-box-static-one .image-box-static-bg {
+		width: 229px;
+		height: 465px;
+	}
+	.image-box-static .image-box-static-one .image-box-static-bg:hover {
+		width: 239px;
+		height: 475px;
+	}
+
+	.image-box-static .image-box-static-two {
+		width: 480px;
+	}
+
+	.image-box-static .image-box-static-two .image-box-static-bg {
+		width: 475px;
+		height: 230px;
+	}
+	.image-box-static .image-box-static-two .image-box-static-bg:hover {
+		width: 480px;
+		height: 240px;
+	}
+
+	// .image-box-static .image-box-static-three {
+	// 	width: auto;
+	// 	top: 241px;
+	// 	left: 243px;
+	// }
+
+	// .image-box-static .image-box-static-three .image-box-static-bg {
+	// 	width: auto;
+	// 	height: 223px;
+	// }
+
+
+	// .image-box-static .image-box-static-four {
+	// 	width: auto;
+	// 	right: 0;
+	// 	margin-top: 241px;
+	// }
+
+	// .image-box-static .image-box-static-four .image-box-static-bg {
+	// 	width: auto;
+	// 	height: 464px;
+	// }
+	// .image-box-static .image-box-static-five {
+	// 	width: auto;
+	// 	margin-top: 475px;
+	// }
+
+	// .image-box-static .image-box-static-five .image-box-static-bg {
+	// 	width: auto;
+	// 	height: 230px;
+	// }
+}
+
+
+// @media screen  and (min-width: 992px ) { 
+// 	.image-box-static .image-box-static-one .image-box-static-bg {
+// 		height: 613px;
+// 	}
+// 	.image-box-static .image-box-static-two .image-box-static-bg {
+// 		height: 301px;
+// 	}
+
+// 	.image-box-static .image-box-static-three {
+// 		top: 313px;
+// 		left: 315px;
+// 	}
+
+// 	.image-box-static .image-box-static-three .image-box-static-bg {
+// 		height: 299px;
+// 	}
+
+// 	.image-box-static .image-box-static-four {
+// 		margin-top: 313px;
+// 	}
+
+// 	.image-box-static .image-box-static-four .image-box-static-bg {
+// 		height: 613px;
+// 	}
+// 	.image-box-static .image-box-static-five {
+// 		margin-top: 624px;
+// 	}
+
+// 	.image-box-static .image-box-static-five .image-box-static-bg {
+// 		height: 302px;
+// 	}
+// }
+
+
+
+// @media screen  and (min-width: 1200px) { 
+// 	.image-box-static .image-box-static-one .image-box-static-bg {
+// 		height: 749px;
+// 	}
+// 	.image-box-static .image-box-static-two .image-box-static-bg {
+// 		height: 367px;
+// 	}
+
+// 	.image-box-static .image-box-static-three {
+// 		top: 380px;
+// 		left: 381px;
+// 	}
+
+// 	.image-box-static .image-box-static-three .image-box-static-bg {
+// 		height: 365px;
+// 	}
+
+// 	.image-box-static .image-box-static-four {
+// 		margin-top: 379px;
+// 	}
+
+// 	.image-box-static .image-box-static-four .image-box-static-bg {
+// 		height: 749px;
+// 	}
+// 	.image-box-static .image-box-static-five {
+// 		margin-top: 761px;
+// 	}
+
+// 	.image-box-static .image-box-static-five .image-box-static-bg {
+// 		height: 367px;
+// 	}
+// }
